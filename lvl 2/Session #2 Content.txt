@@ -1,0 +1,224 @@
+#include <bits/stdc++.h>
+typedef long long ll;
+using namespace std;
+///Set
+///Multiset
+///Unorder_set
+///Unordered_multiset
+///Map
+///Multimap
+///Unordered_map
+///Unordered_multimap
+///priority queue
+int main()
+{
+    ///Set
+    /// All Elements Are Sorted + No Duplication
+    /// Also Insertion , Removal , Searching O(Log n)
+    ///Implemented Using Red-Black Tree (Self Balancing Binary Search Tree)
+    /// Set/MultiSet/Map/MultiMap Complexity
+    /*
+    insert(X) : Adds a new element      				       O(log⁡(n) )
+    erase(X) : Removes the value X from the set.		       O(log⁡(n) )
+    ersae(it) : Removes the element at the iterator.	            O(1)
+    erase(it1,it2) : Removes an interval.	                O(n)
+    find(X) : Returns an iterator to the element X in the set if found, else returns the iterator to end. O(log⁡(n))
+    lower_bound(X) & upper_bound(X) 			       O(log⁡(n))
+    count(X)                                       O(log⁡(n))
+    */
+     /// Unorderd_set/Unorderd_multiset/Unorderd_Map/Unorderd_MultiMap Complexity
+     ///O(1) In Average Case O(n) In Worst Case
+    /*
+    insert(X) : Adds a new element      				       O(1)
+    erase(X) : Removes the value X from the set.		       O(1)
+    ersae(it) : Removes the element at the iterator.	       O(1)
+    erase(it1,it2) : Removes an interval.	                   O(n)
+    find(X) : Returns an iterator to the element X in the set if found, else returns the iterator to end.
+    count(X)       O(1)
+    */
+
+//    set<ll> s1;
+//     //set<ll> s1 = {2,3,4,5}; // 1 2 3 4 5
+//    //set<ll , greater<ll>> s1; /// 5 4 3 2 1
+//    s1.insert(1); // O(Log n)
+//    s1.insert(5);
+//    s1.insert(5);// 5 Will Be Added Once (No Duplication)
+//    s1.insert(5);
+//    s1.insert(3);
+//    s1.insert(2);
+//    s1.insert(4);
+
+//for(auto it : s1)cout<<it<<" ";
+
+//set<ll>::iterator it = s1.begin();
+//    for (it; it != s1.end(); ++it)
+//    {
+//        cout << *it<<" ";
+//    }
+  ///Reverse Printing
+//set<ll>::reverse_iterator it = s1.rbegin();
+//  for (it  ; it != s1.rend(); ++it)
+//    {
+//        cout << *it<<" ";
+//    }
+
+//        set<ll>::iterator it = s1.begin();
+//       ++++it;
+//       set<ll>::iterator it2 = s1.end(); { 1 2 3 4 5 }<-end()
+//       ----it2;
+
+       // set<ll>::reverse_iterator it3 = s1.rbegin();// You Can't Used it to erase (++)
+        //++it3;
+        //set<ll>::reverse_iterator it4 = s1.rend(); // rend()->{ 1 2 3 4 5 } (--)
+       //++it4;
+        //cout<<*it3;
+
+       // s1.erase(1); // Specific Value O(Log N)
+       //s1.erase(++++it);
+      // s1.erase(++++it, s1.end()); // Remove Range O(n), n is number of elements between starting position and ending position.
+     // s1.erase(s1.find(5));
+     //   s1.erase(++it , s1.find(4)); // 4 Is Not Included
+
+//     if(s1.find(8) == s1.end()) // .find() O(Log n)
+//        cout<<"Not Exist\n";
+//     else  cout<<"Exist\n";
+
+       // auto low = s1.lower_bound(3);// First Number Which Is Equal Or Greater Than 3
+       // auto up = s1.upper_bound(3);// First Number Which Is Greater Than 3   -> if element Not Exist It Returns Iterator For Last Element (.end()-1)
+      // cout<< *up;
+
+            // s1.size();
+             // s1.max_size();
+            //s1.empty();
+          // s1.count(20);
+        // s1.swap(s2);
+        //s1.clear(); O(N)
+
+//------------------------------------------------------------------------
+/// VIP Note -> Multiset is Same In Every Thing Except Accept Duplication
+/// Also Insertion Removal , Searching O(Log n)
+///Implemented Using Red-Black Tree (Balanced Binary Search Tree)
+//-------------------------------------------------------------------------
+
+        /// unordered_set / unordered_multiset -> Elements Are Stored Buckets Not In Insert Sequence
+        /// Also Insertion Removal , Searching In Constant Time O(1) In Average Case O(n) In Worst Case
+        ///Implemented Using Hash Table -> Buckets -> Entries
+        /// Element Value Cannot Be Changed As There Is No Random Access
+        /// No Reverse Iterator
+        /// No unordered_set<ll , greater<ll>> s1;
+        /// No lower_bound()/upper_bound()
+//    unordered_multiset<ll> s1;
+//     s1.insert(3);
+//     s1.insert(1);
+//     s1.insert(2);
+//     s1.insert(5);
+//     s1.insert(4);
+//     s1.insert(4);
+//      s1.insert(4);
+    //s1.erase(s1.begin());
+       //cout<<s1.count(4);
+//   for(auto it : s1)cout<<it<<" ";
+//    cout<<"\n";
+//unordered_multiset<ll>::iterator it = s1.begin();
+//       s1.erase(++it,s1.find(4));
+    //for(auto it : s1)cout<<it<<" ";
+
+//---------------------------------
+/// priority queue Uses Binary Heap
+//    priority_queue<ll>pq;
+//    priority_queue<ll>pq2; // 4 3 2 1
+//    //priority_queue<ll, vector<ll> , greater<ll>>pq; /// 1 2 3 4
+//        pq.push(10);
+//        pq.push(8); O(Log n)
+//        pq.push(9);
+//        pq.push(1);
+//        pq.push(3);
+//        pq.size(); O(1)
+//        pq2.push(5);
+//         pq2.emplace(100);
+//         pq.swap(pq2);
+//        while(pq.size())
+//        {
+//            cout<<pq.top()<<"\n"; O(1)
+//            pq.pop(); // O(Log n) Cause Max Element is Top So, Removing it Affect Structure Of Tree
+//        }
+//        pq.empty(); O(1)
+//-------------------------------------------------------
+    ///Implemented Using Red-Black Tree (Self Balancing Binary Search Tree)
+        ///Key Value Is Unique No Duplication Except in (Multimap)
+        /// You Can't Edit Value Of Key .. You Can Only Insert It Or Delete It
+      //  map<string,ll> mp;
+      //  map<string,ll, greater<string>> mp;
+        map<string,ll> mp = {{"yousef",11},{"Mohamed",21},{"Ahmed",21}};
+
+       // for(auto it : mp)cout<<it.first<<" "<<it.second;
+
+//        map<string,ll>::iterator it = mp.begin();
+//    for (it; it != mp.end(); ++it)
+//    {
+//        cout << it->first<<" ";
+//    }
+
+//        map<string,ll>::reverse_iterator it = mp.rbegin();
+//    for (it; it != mp.rend(); ++it)
+//    {
+//        cout << it->first<<" ";
+//    }
+//
+//        mp[ "Arafat" ] = 30;
+//         mp.insert(pair<string,ll>("testtt",30));
+//        mp.insert({"Arafatds",30});
+            ///mp.insert({"Ahmed",30}); //Will Be Ignored As Key Already Exist
+//        mp.insert(make_pair("Arafatds",30));
+        /// insert a single element or the range of element in the map.Its time complexity is O(logN)
+        ///, when only element is inserted and O(1) when position is also given.
+
+       //cout<<mp.at("Arafat"); /Throw Exceptions If Not Exist
+//for(auto it : mp)cout<<it.first<<" "<<it.second<<"\n";
+cout<<"\n";
+//     mp.erase("Arafat");  log(n)
+//     auto it = mp.begin();
+//     mp.erase(++it);
+//     mp.erase(it);
+//     mp.erase(++it,mp.find("Arafatds"));///.find() O(logN).
+ //for(auto it : mp)cout<<it.first<<" "<<it.second<<"\n";
+
+  //auto low = mp.lower_bound("Mohamed");// First Number Which Is Equal Or Greater Than 3
+ // auto up = mp.upper_bound("Mohamed");// First Number Which Is Greater Than 3   -> if element Not Exist It Returns Iterator For Last Element (.end()-1)
+//       mp.erase(mp.begin(),up);
+       //cout<< up->first<<" "<<up->second;
+ //mp.insert()
+        //mp.count(Key);  O(logN).
+
+
+//for(auto it : mp)cout<<it.first<<" "<<it.second<<"\n";
+//cout<<"\n";
+//        map<string,ll>::iterator it = mp.begin();
+//        it->second = 1231;
+//        it->first = "abc";//Error Can't Edit Key
+// mp.size();
+//mp.max_size();
+             // mp.max_size();
+            //mp.empty();  O(1).
+           // mp.clear();  O(N).
+           // mp.swap(mp2);
+           //------------------------------------------------------------------------
+/// VIP Note -> Multimap is Same In Every Thing Except Accept Duplication
+/// Also Insertion Removal , Searching O(Log n)
+///Implemented Using Red-Black Tree (Balanced Binary Search Tree)
+//-------------------------------------------------------------------------
+///-----------------------------------------------------------------
+///Unorder_map/Unorder_multimap
+/// VIP Note ->   Multimap / Unorder_multimap They Don't support Random Acces No [] Operator Cause Duplication In Keys Is Allowed
+ /// Also Insertion Removal , Searching In Constant Time O(1) In Average Case O(n) In Worst Case
+        ///Implemented Using Hash Table -> Buckets -> Entries
+        /// Element Value Cannot Be Changed As There Is No Random Access
+        /// No Reverse Iterator
+        /// No unordered_map<string ,ll , greater<string>> ump;
+        /// No lower_bound()/upper_bound()
+
+        unordered_map<string , ll> ump = {{"yousef",11},{"Mohamed",21},{"Ahmed",21},{"AAAhmed",21}};
+        for(auto it:ump) cout<<it.first<<" "<<it.second<<"\n";
+        cout<< ump.count("yousef");
+    return 0;
+}

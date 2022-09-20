@@ -1,0 +1,216 @@
+#include <bits/stdc++.h>
+typedef long long ll;
+using namespace std;
+
+int main()
+{
+
+   // cout << "Hello world!" << endl;
+
+
+   //set<ll,greater<ll>> s1 = {8,5,3,2,1};
+//   s1.insert(5);
+//   s1.insert(5);//O(Log n)
+//   s1.insert(5);
+//   s1.insert(5);
+//   s1.insert(2);
+//   s1.insert(1);
+//   s1.insert(6);
+//   s1.insert(3);
+   // for(auto it : s1) cout<<it<<"\n";
+//for(auto it : s1) cout<<it<<"\n";
+
+//   set<ll>::iterator it;
+//
+//   for(it  = s1.begin();it != s1.end();it++)
+//   {
+//       cout<<*it;
+//   }
+//
+//        set<ll>::reverse_iterator it = s1.rbegin();
+//   for(;it != s1.rend();it++)
+//   {
+//       cout<<*it;
+//   }
+
+  //      cout<<s1.count(19);
+
+        //f(s1.find(7) != s1.end())cout<<"Exist\n";
+
+
+       // s1.erase(8);//O(Log n)
+//        set<ll>::iterator it = s1.begin();
+//        it;
+        // {1,4,5,6,7,8};
+        //s1.erase(it,s1.end()); O(n)
+        //s1.erase(it,s1.find(7)); //O(Log n)
+
+
+        //for(auto it : s1) cout<<it<<"\n";
+
+        //auto low = s1.lower_bound(5); //O(Log n)
+        //auto up = s1.upper_bound(5); //O(Log n)
+        //cout<<s1.size();
+       // cout<<s1.swap(s2);
+       // cout<<s1.empty();
+//       s1.clear();
+//       for(auto it : s1) cout<<it<<"\n";
+        // s2 {1,4,5,6,7,8};
+        // s1 {1,2,3,4}
+///------------------------------------------
+//    multiset<ll> s1 = {8,5,3,2,1,1,1,1};
+//    s1.
+//for(auto it : s1) cout<<it<<"\n";
+    //return 0;
+///-----------------------------------------
+
+//        unordered_set<ll>s2;
+//        s2.insert(1);
+//        s2.insert(4);
+//        s2.insert(5);
+//        s2.insert(6);
+//        s2.erase(s2.begin());
+//        s1.find(5);
+//        for(auto it:s2)cout<<it<<"\n";
+
+///---------------------------------------------
+
+
+           // map<string,ll>mp = {{"ahmed",21},{"yousef",50},{"asmaa",60} };
+           // cout<<mp["yousef"]<<"\n";
+
+
+
+//                for(auto it : mp)
+//                {
+//                    cout<<it.first<<" "<<it.second<<"\n";
+//                }
+
+              //  map<string,ll>::iterator it = mp.begin();
+               // cout<<it->second;
+//           for(;it != mp.end();it++)
+//           {
+//               cout<<it->first<<" "<<it->second<<"\n";
+//           }
+//
+//         map<string,ll>::reverse_iterator it = mp.rbegin();
+//   for(;it != mp.rend();it++)
+//   {
+//     cout<<it->first<<" "<<it->second<<"\n";
+//   }
+
+
+
+//        mp["test"] = 100000;
+//        mp.insert({"abc",23131}); O(log N)
+//        mp.insert(make_pair("abcsda",23131));
+//        mp.insert(pair<string,ll>("eslam",12));
+       // cout<<mp["s"]<<"\n";
+//      //  cout<<mp.at("s");
+//                for(auto it : mp)
+//                {
+//                    cout<<it.first<<" "<<it.second<<"\n";
+//                }
+           // mp.erase("abc");O(log N)
+//        map<string,ll>::iterator it = mp.begin();
+//        ++++it;
+//        mp.erase(it);
+//        map<string,ll>::iterator it = mp.begin();
+//        it->first = "aaa";///Key -> Value  "ddd" -> 123
+//        cout<<it->first;
+       // mp.erase(++++it);
+      // mp.erase(it,mp.find("s"));
+//      mp.erase(it,mp.end());
+//                for(auto it : mp)
+//                {
+//                    cout<<it.first<<" "<<it.second<<"\n";
+//                }
+
+
+            //cout<<mp.count("abc");
+            //mp.size();
+            //mp.empty();
+            //mp.clear();
+            //mp.swap(mp2);
+//-----------------------------------------------------------------
+
+
+//            priority_queue<ll,vector<ll>,greater<ll>> pq;
+//             priority_queue<ll,vector<ll>,greater<ll>> pq2;
+//            pq.push(2);
+//            pq.push(4);
+//            pq.push(5);
+//            pq.push(6);
+//            pq.size();
+//            pq.swap(pq2);
+//            pq.push(7);
+//            while(!pq.empty())
+//            {
+//                cout<<pq.top()<<" ";
+//                pq.pop();
+//
+//            }
+
+
+//
+//        ll n , m , cnt = 0;
+//        cin>>n>>m;
+//
+//        while( n != 0 && m != 0)
+//        {
+//            cnt = 0;
+//            map<ll,ll>mp;
+//            for(ll i = 0;i < n;i++)
+//            {
+//                ll num;
+//                cin>>num;//1 -> 0
+//                mp[ num ]++;
+//            }
+//              for(ll i = 0;i < m;i++)
+//            {
+//                ll num;
+//                cin>>num;
+//                if(mp[num] >= 1) cnt++;
+//            }
+//            cout<<cnt<<"\n";
+//            cin>>n>>m;
+//        }
+
+//            ll t;
+//            cin>>t;
+//            while(t--)
+//            {
+//                map<ll,ll>mp;
+//                priority_queue<ll>pq;
+//                ll sz;
+//                cin>>sz;
+//                for(ll i =0;i<sz;i++)
+//                {
+//                    ll num;
+//                    cin>>num;
+//                    mp[ num ] ++;
+//                }
+//                for(auto it : mp) pq.push(it.second);
+//
+//                while(pq.size() >= 2)
+//                {
+//                    ll t1 = pq.top();
+//                    pq.pop();
+//                    ll t2 = pq.top();
+//                    pq.pop();
+//                    t1-- , t2--;
+//                    if(t1) pq.push(t1);
+//                    if(t2) pq.push(t2);
+//                }
+//                if(pq.empty()) cout<<0<<"\n";
+//                 else cout<<pq.top()<<"\n";
+//            }
+
+
+
+
+
+
+
+
+}
