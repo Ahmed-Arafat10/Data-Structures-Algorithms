@@ -54,7 +54,7 @@ int main()
     //Point to second last element
     rit = v2.rbegin()+1;
 
-    //rend() will point on {  [before first eleemt]
+    //rend() will point on {  [before first element]
     //Note to move to the right you will use [-1] like v2.rend()-1
     //Point to first element
     rit2 = v2.rend()-1;
