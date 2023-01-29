@@ -14,13 +14,13 @@ int main()
     //Add new element at end
     v2.push_back(1);
 
-    //Faster then push_back(), not supported by all compilers
+    //Faster than push_back(), not supported by all compilers
     v2.emplace_back(10);
 
     // Add number 200 five times
     vector<ll> v3(5,200);
 
-    //Remove last elemet
+    //Remove last element
     v2.pop_back();
 
     //Print first element
@@ -59,7 +59,7 @@ int main()
     //Point to first element
     rit2 = v2.rend()-1;
 
-    //Print element iterator is pointing at (use dereferencing operator to access element stored in the address that is stored in the iterator)
+    //Print element iterator is pointing at (use de-referencing operator to access element stored in the address that is stored in the iterator)
     cout<<*rit2;
 
     //Check if vector is empty
